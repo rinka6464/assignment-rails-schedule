@@ -1,0 +1,15 @@
+{
+  "name": "Rails Schedule App",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.2",
+  "postCreateCommand": "gem install rails -v 7.2.2.1 && bundle install && sudo service postgresql start && rails db:create db:migrate",
+  "forwardPorts": [3000],
+  "remoteEnv": {
+    "GEM_HOME": "/home/vscode/.gem/ruby/3.2.2",
+    "GEM_PATH": "/home/vscode/.gem/ruby/3.2.2",
+    "PATH": "/home/vscode/.gem/ruby/3.2.2/bin:${containerEnv:PATH}"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/postgresql:1": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
