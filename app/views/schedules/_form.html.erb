@@ -1,0 +1,46 @@
+<div class="form-container">
+  <%= form_with(model: schedule) do |form| %>
+    <% if schedule.errors.any? %>
+    <div style="color: red">
+      <h2>このスケジュールの保存ができませんでした</h2>
+      <ul>
+        <% schedule.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div>
+      <%= form.label :title, "タイトル ※", style: "display: block" %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :start_date, "開始日 ※", style: "display: block" %>
+      <%= form.date_field :start_date %>
+    </div>
+
+    <div>
+      <%= form.label :end_date, "終了日 ※", style: "display: block" %>
+      <%= form.date_field :end_date %>
+    </div>
+
+    <div>
+      <%= form.label :all_day, "終日", style: "display: block" %>
+      <%= form.check_box :all_day %>
+    </div>
+
+    <div>
+      <%= form.label :memo, "メモ", style: "display: block" %>
+      <%= form.text_area :memo %>
+    </div>
+
+    <br>
+
+    <div class="form-actions">
+      <%= form.submit "保存", class: "btn-submit" %>
+      <%= link_to "キャンセル", schedules_path, class: "btn-cancel" %>
+    </div>
+  <% end %>
+</div>
