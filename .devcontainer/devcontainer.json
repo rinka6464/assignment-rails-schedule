@@ -9,7 +9,6 @@
     "PATH": "/home/vscode/.gem/ruby/3.2.2/bin:${containerEnv:PATH}"
   },
   "features": {
-    "ghcr.io/devcontainers/features/postgresql:1": {},
     "ghcr.io/devcontainers/features/git:1": {}
   }
 }

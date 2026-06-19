@@ -1,0 +1,53 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="<%= dom_id @schedule %>">
+  <div class="show-wrapper">
+    <p>
+      <%= link_to "← 一覧に戻る", schedules_path ,class:"btn-back" %>
+    </p>
+    <h2>
+      <%= @schedule.title %>
+    </h2>
+    <p class="btn-edit-wrapper">
+      <%= link_to "編集", edit_schedule_path(@schedule),class:"btn-edit" %>
+    </p>
+
+    <table class="show-table">
+      <tbody>
+        <tr>
+          <th>
+            <p>開始日</p>
+          </th>
+          <td>
+            <p><%= @schedule.start_date.strftime("%Y/%m/%d")  %></p>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <p>終了日</p>
+          </th>
+          <td>
+            <p><%= @schedule.end_date.strftime("%Y/%m/%d")  %></p>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <p>終日</p>
+          </th>
+          <td>
+            <p><%= @schedule.all_day ? "〇" : "" %></p>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <p>メモ</p>
+          </th>
+          <td>
+            <p><%= @schedule.memo %></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
