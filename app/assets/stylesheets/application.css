@@ -1,10 +1,180 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 0px 150px;
+}
+
+
+/* ヘッダー */
+header {
+  background-color: #1c1d3b;
+  color: white;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* テーブルデザイン */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+}
+
+/* 一覧テーブル位置 */
+.index-table {
+  margin: 16px auto 0;
+}
+
+/* 詳細テーブル位置 */
+.show-wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+.show-table {
+  margin: 16px auto 0;
+}
+.show-table th,
+.show-table td {
+  padding: 3px 6px;
+}
+
+.today-date{
+  color: #a2a2a4;
+}
+
+.table-footer{
+  display: flex;
+  justify-content:space-between;
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 0px 20px;
+}
+
+/* ボタン */
+/* 送信ボタン */
+input[type="submit"] {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-submit {
+  background-color: #2962ff;
+  color: white;
+}
+
+.btn-cancel {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #a2a2a4;
+  color: white;
+}
+
+/* index新規作成ボタンデザイン */
+.btn_NewSchedules{
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 20px;
+  background-color: #2962ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* index新規作成ボタンの位置 */
+.index-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 保存ボタン */
+.form-actions{
+  display: flex;
+  gap: 10px;
+}
+
+/* 一覧へ戻る */
+.btn-back{
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* 詳細を編集ボタン*/
+.btn-edit{
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 2px solid #2962ff;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  background-color: transparent;
+  color:#2962ff;
+}
+
+.btn-edit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* 入力画面 */
+.form-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
